@@ -1,0 +1,146 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 40px;
+}
+
+img{
+    width: 500px;
+    height:500px;
+}
+.linea{
+background: #0b5475;
+height: 5px;
+width: 100%;
+display: block;
+
+}
+
+#inicio {
+    color: red;
+    text-align: center;
+    transition: transform 5s;
+}
+
+#inicio:target{
+
+    transform: translateX(150px);
+}
+
+.transicion {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+    font-family: Verdana,sans-serif;
+  }
+  .trancicion:hover {
+      color: red;
+  }
+  a.trancicion {
+      transition: color 0.8s linear 0.2s;
+  }
+
+.galeria {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* podemos crear las cantidades de columnas */
+    width: 100%;
+    margin: auto;
+    grid-gap: 10px; /* Espacio entre las columnas */
+    padding: 20px 0px 0 0;
+    overflow: scroll;
+}
+.galeria > a {
+
+    display: block;
+    position: relative;
+    overflow: hidden;   /* Regular el contenido que sobresale en una caja ejm. scroll */
+    box-shadow: 0 0 6px rgba(120, 236, 221, 0.5); /* Sombra difuminada*/
+}
+
+
+.galeria img{
+
+    width: 70%;
+    
+    vertical-align:top;
+    height: 300px;
+    object-fit:cover;
+    transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+    /* filter: blur(2px); */
+    transform:rotate(10deg) scale(1.3);
+
+}
+
+.light-box{
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img{
+    /* width: 75vw; */
+    max-height: 70vh;
+}
+
+.light-box:target{
+  transform: scale(1);
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #851919;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+
+.img_central{
+    width: 200px;
+    height: 200px;
+}
+
+.next{
+    display:block;
+    background: red;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+
+}
